@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Immigration Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌍 AI Immigration Assistant</h1>
+
+    <form method="POST">
+        <input type="text" name="country" placeholder="Destination Country" required>
+        <input type="text" name="visa_type" placeholder="Visa Type (Student/Work/Tourist)" required>
+        <input type="text" name="profile" placeholder="Your Profile" required>
+        <button type="submit">Get Visa Guidance</button>
+    </form>
+
+   {% if result %}
+<div class="result-box">
+    <h2>🛂 Visa Guidance</h2>
+    <div class="result-text">
+        {{ result | safe }}
+    </div>
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
